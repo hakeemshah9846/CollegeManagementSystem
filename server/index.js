@@ -18,6 +18,8 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/faculty", facultyRoutes);
 app.use("/api/student", studentRoutes);
 
+//This is a comment
+
 const PORT = process.env.PORT || 5001;
 app.get("/", (req, res) => {
   res.send("Hello to college erp API");
