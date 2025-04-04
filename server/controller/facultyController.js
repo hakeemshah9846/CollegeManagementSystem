@@ -226,6 +226,7 @@ export const markAttendance = async (req, res) => {
     const sub = await Subject.findOne({ subjectName });
 
     const allStudents = await Student.find({ department, year, section });
+    // const allStudents = await Student.find({ _id: { $in: selectedStudents } });
 
     for (let i = 0; i < allStudents.length; i++) {
       const pre = await Attendence.findOne({

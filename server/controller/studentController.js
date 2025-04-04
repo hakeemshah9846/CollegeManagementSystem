@@ -176,9 +176,9 @@ export const testResult = async (req, res) => {
 
 export const attendance = async (req, res) => {
   try {
-    const { department, year, section } = req.body;
+    const { department, year, section, _id } = req.body;
     const errors = { notestError: String };
-    const student = await Student.findOne({ department, year, section });
+    const student = await Student.findOne({ department, year, section, _id });
 
     const attendence = await Attendence.find({
       student: student._id,

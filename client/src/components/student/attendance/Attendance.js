@@ -8,6 +8,7 @@ import Body from "./Body";
 
 const Attendance = () => {
   const user = JSON.parse(localStorage.getItem("user"));
+  // console.log("user : ", user.result._id);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,7 +16,8 @@ const Attendance = () => {
       getAttendance(
         user.result.department,
         user.result.year,
-        user.result.section
+        user.result.section,
+        user.result._id,
       )
     );
   }, [dispatch]);

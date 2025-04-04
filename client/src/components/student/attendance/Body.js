@@ -11,6 +11,7 @@ const Body = () => {
   const dispatch = useDispatch();
   const [error, setError] = useState({});
   const attendance = useSelector((state) => state.student.attendance.result);
+  console.log("attendance : ", attendance);
 
   const [loading, setLoading] = useState(false);
   const store = useSelector((state) => state);

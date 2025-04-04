@@ -39,7 +39,7 @@ const Body = () => {
   }, [store.errors]);
 
   const handleInputChange = (e) => {
-    const tempCheck = checkedValue;
+    const tempCheck = [...checkedValue];
     let index;
     if (e.target.checked) {
       tempCheck.push(e.target.value);
@@ -71,6 +71,7 @@ const Body = () => {
         value.section
       )
     );
+    setCheckedValue([]);
   };
 
   useEffect(() => {
