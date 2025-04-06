@@ -55,13 +55,16 @@ export const getSubject = (department, year) => async (dispatch) => {
 };
 
 export const getTestResult =
-  (department, year, section) => async (dispatch) => {
+  (department, year, section, _id) => async (dispatch) => {
     try {
       const formData = {
         department,
         year,
         section,
+        _id,
       };
+      console.log("formData", formData);
+
       const { data } = await api.getTestResult(formData);
       dispatch({ type: TEST_RESULT, payload: data });
     } catch (error) {

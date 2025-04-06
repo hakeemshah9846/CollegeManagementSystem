@@ -8,6 +8,7 @@ import Body from "./Body";
 
 const TestResult = () => {
   const user = JSON.parse(localStorage.getItem("user"));
+  console.log("user.result : ", user.result._id);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,7 +16,8 @@ const TestResult = () => {
       getTestResult(
         user.result.department,
         user.result.year,
-        user.result.section
+        user.result.section,
+        user.result._id,
       )
     );
   }, [dispatch]);

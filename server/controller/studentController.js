@@ -139,7 +139,9 @@ export const updateStudent = async (req, res) => {
 
 export const testResult = async (req, res) => {
   try {
-    const { department, year, section } = req.body;
+    console.log("req.body : ", req.body);
+    const { department, year, section, _id } = req.body;
+    console.log("_id : ", _id);
     const errors = { notestError: String };
     const student = await Student.findOne({ department, year, section });
     const test = await Test.find({ department, year, section });
@@ -152,7 +154,7 @@ export const testResult = async (req, res) => {
       var subjectCode = test[i].subjectCode;
       var subject = await Subject.findOne({ subjectCode });
       var marks = await Marks.findOne({
-        student: student._id,
+        student: _id,
         exam: test[i]._id,
       });
       if (marks) {
