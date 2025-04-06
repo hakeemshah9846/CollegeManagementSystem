@@ -8,6 +8,7 @@ import {
   getStudent,
   uploadMarks,
   markAttendance,
+  // getSubjects
 } from "../controller/facultyController.js";
 import auth from "../middleware/auth.js";
 
@@ -21,5 +22,7 @@ router.post("/gettest", auth, getTest);
 router.post("/getstudent", auth, getStudent);
 router.post("/uploadmarks", auth, uploadMarks);
 router.post("/markattendance", auth, markAttendance);
+// router.post("/getsubjects", auth, getSubjects);
+
 
 export default router;

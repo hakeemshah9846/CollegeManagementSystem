@@ -6,6 +6,7 @@ import {
   ADD_TEST,
   GET_TEST,
   GET_STUDENT,
+  // GET_FACULTY_SUBJECTS,
   MARKS_UPLOADED,
   ATTENDANCE_MARKED,
 } from "../actionTypes";
@@ -108,3 +109,18 @@ export const markAttendance =
       dispatch({ type: SET_ERRORS, payload: error.response.data });
     }
   };
+
+
+  // export const getSubject = (department) => async (dispatch) => {
+  //   try {
+  //     const formData = {
+  //       department,
+  //     };
+  //     console.log("faculty -> getSubject : ", formData);
+  //     const { data } = await api.getFacultySubjects(formData);
+  //     console.log("data : ", data);
+  //     dispatch({ type: GET_FACULTY_SUBJECTS, payload: data });
+  //   } catch (error) {
+  //     dispatch({ type: SET_ERRORS, payload: error.response.data });
+  //   }
+  // };

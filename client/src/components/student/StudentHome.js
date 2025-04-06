@@ -21,14 +21,16 @@ const StudentHome = () => {
       getTestResult(
         user.result.department,
         user.result.year,
-        user.result.section
+        user.result.section,
+        user.result._id,
       )
     );
     dispatch(
       getAttendance(
         user.result.department,
         user.result.year,
-        user.result.section
+        user.result.section,
+        user.result._id,
       )
     );
     dispatch(getNotice());

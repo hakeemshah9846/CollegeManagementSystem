@@ -2,6 +2,7 @@ import {
   ADD_TEST,
   ATTENDANCE_MARKED,
   FACULTY_LOGIN,
+  // GET_FACULTY_SUBJECTS,
   GET_TEST,
   LOGOUT,
   MARKS_UPLOADED,
@@ -17,6 +18,7 @@ const initialState = {
   marksUploaded: false,
   attendanceUploaded: false,
   tests: [],
+  // subjects : [],
 };
 
 const facultyReducer = (state = initialState, action) => {
@@ -57,6 +59,11 @@ const facultyReducer = (state = initialState, action) => {
         ...state,
         attendanceUploaded: action.payload,
       };
+      // case GET_FACULTY_SUBJECTS:
+      //   return {
+      //     ...state,
+      //     subjects: action.payload,
+      //   };
 
     default:
       return state;

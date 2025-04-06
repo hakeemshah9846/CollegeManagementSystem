@@ -13,6 +13,7 @@ export const GET_ALL_STUDENT = "GET_ALL_STUDENT";
 export const GET_STUDENT = "GET_STUDENT";
 export const GET_FACULTY = "GET_FACULTY";
 export const GET_SUBJECT = "GET_SUBJECT";
+// export const GET_FACULTY_SUBJECTS = "GET_FACULTY_SUBJECTS";
 export const GET_ALL_ADMIN = "GET_ALL_ADMIN";
 export const GET_ALL_DEPARTMENT = "GET_ALL_DEPARTMENT";
 export const SET_ERRORS = "SET_ERRORS";

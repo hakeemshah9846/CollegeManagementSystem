@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getNotice } from "../../redux/actions/adminActions";
+import { getSubject } from "../../redux/actions/facultyActions";
 import Body from "./Body";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
+// const user = JSON.parse(localStorage.getItem("user"));
+
 const FacultyHome = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
+    // console.log("User (faculty) : ", user.result);
+    // dispatch(getSubject(user.result.department));
     dispatch(getNotice());
   }, [dispatch]);
   return (

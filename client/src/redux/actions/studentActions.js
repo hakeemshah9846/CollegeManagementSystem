@@ -66,6 +66,8 @@ export const getTestResult =
       console.log("formData", formData);
 
       const { data } = await api.getTestResult(formData);
+      console.log("data : ", data);
+      
       dispatch({ type: TEST_RESULT, payload: data });
     } catch (error) {
       dispatch({ type: SET_ERRORS, payload: error.response.data });

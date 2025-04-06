@@ -271,3 +271,16 @@ export const markAttendance = async (req, res) => {
     res.status(500).json(errors);
   }
 };
+
+// export const getSubjects = async (req, res) => {
+//   try {
+//     const {department} = req.body;
+//     console.log("department : ", department);
+    
+//     const subjects = await Subject.find({department});
+//     console.log("subjects : ", subjects.length);
+//     res.status(200).json(subjects.length);
+//   } catch (error) {
+//     console.log("Backend Error", error);
+//   }
+// };
